@@ -1,0 +1,49 @@
+.list {
+  font-family: "Robot", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 auto;
+  min-width: 1200px;
+  color: @basic-black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.list__item {
+  width: 240px;
+  height: 250px;
+  padding: 25px;
+  box-shadow: 0 3px 15px @basic-black-opacity;
+  border-radius: 10px;
+  background-color: @basic-green;
+  color: @basic-white;
+}
+
+.list__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__image-holder {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: @basic-green-opacity;
+}
+
+.list__title {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.list__item:nth-child(2) {
+  background: @basic-white;
+  color: @basic-grey;
+}
+
+.list__item:nth-child(2) .list__image-holder  {
+  background-color: @basic-white;
+}
