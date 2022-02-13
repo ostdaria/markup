@@ -1,0 +1,116 @@
+.holder__title {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+.holder__list {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.holder__label {
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+
+.holder__checkmark {
+  height: 13px;
+  width: 13px;
+  border: 1.5px solid @basic-white;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 2px;
+  margin-left: 15px;
+}
+
+.holder__input--custome {
+  position: relative;
+
+  &:checked ~ .holder__checkmark::before {
+    content: "";
+    height: 8px;
+    width: 5px;
+    background-color: @basic-green;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  &:checked ~ .holder__checkmark::after {
+    content: "";
+    height: 3px;
+    width: 11px;
+    border-bottom: 1.5px solid @basic-white;
+    border-left: 1.5px solid @basic-white;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 3px;
+    top: 1px;
+  }
+
+  &:hover ~ .holder__checkmark::after {
+    border-bottom: 1.5px solid @basic-green-opacity;
+    border-left: 1.5px solid @basic-green-opacity;
+  }
+
+  &:hover ~ .holder__checkmark {
+    border: 1.8px solid @basic-green-opacity;
+  }
+
+  &:focus ~ .holder__checkmark {
+    border: 1.8px solid @basic-grey;
+  }
+}
+
+.holder__span {
+  font-weight: 100;
+  text-align: right;
+}
+
+.holder__input--checkbox-grey ~ .holder__checkmark {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid @basic-grey;
+  text-align: right;
+}
+
+.holder__input--checkbox-grey:checked ~ .holder__checkmark {
+  border: 1.5px solid @basic-blue;
+  background-color: @basic-blue-opacity;
+}
+
+.holder__input--checkbox-grey {
+  &:hover ~ .holder__checkmark {
+    border: 1.5px solid @basic-blue;
+  }
+}
+
+.holder__list--margin {
+  margin-bottom: 40px;
+}
+
+.holder__item {
+  margin-bottom: 5px;
+}
+
+.holder__text {
+  font-weight: 100;
+  text-align: right;
+  margin: 0;
+}
+
+.holder__text span {
+  text-transform: uppercase;
+}
