@@ -1,0 +1,268 @@
+/*Fonts*/
+
+/* 
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Roboto Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Roboto Medium"),
+    url("../fonts/Roboto-Medium.woff") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Roboto Bold"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+} */
+
+
+/*Global*/
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*Colors*/
+:root {
+--basic-black: #000000;
+--basic-white: #FFFFFF;
+--basic-grey:#8d8d8d;
+--basic-light-grey:#9F9F9F;
+--basic-dark-grey: #363738;
+--basic-green: #61c98b;
+--basic-green-opacity: rgba(88, 165, 119, 0.6);
+--basic-black-opacity: rgba(0, 0, 0, 0.15);
+--basic-blue: #87CEFA;
+--basic-blue-opacity: rgba(135, 206, 250, 0.3);
+}
+
+.list {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 auto;
+  min-width: 1200px;
+  color: var(--basic-black);
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.list__item {
+  width: 240px;
+  height: 250px;
+  padding: 25px;
+  box-shadow: 0 3px 15px var(--basic-black-opacity);
+  border-radius: 15px;
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+}
+
+.list__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__image-holder {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: var(--basic-green-opacity);
+}
+
+.list__svg {
+  position: relative;
+  top: 17px;
+  left: 18px;
+}
+
+/* .list__svg:hover path {
+  fill: var(--basic-blue);
+} */
+
+.list__svg--level-two path {
+  fill: var(--basic-blue);
+}
+
+
+/* .list__image-holder:hover svg path {
+  fill: var(--basic-blue);
+} */
+
+.list__image-holder svg {
+  position: relative;
+  top: 16px;
+  left: 18px;
+}
+
+.list__title {
+  font-size: 36px;
+  font-weight: thin;
+  margin: 10px 0;
+}
+
+.list__item--level-two {
+  background: var(--basic-white);
+  color: var(--basic-grey);
+}
+
+.list__image-holder--level-two {
+  background-color: var(--basic-white);
+}
+
+/* .list__image-holder--level-two:hover svg path {
+  fill: var(--basic-green);
+} */
+
+
+.holder__title {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+.holder__list {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.holder__label {
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+
+.holder__checkmark {
+  height: 13px;
+  width: 13px;
+  border: 1.5px solid var(--basic-white);
+  border-radius: 50%;
+  position: relative;
+  margin-left: 15px;
+}
+
+.holder__input--level-one {
+  position: relative;
+}
+
+.holder__input--level-one:checked ~ .holder__checkmark::before {
+  content: "";
+  height: 8px;
+  width: 5px;
+  background-color: var(--basic-gren);
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+.holder__input--level-one:checked ~ .holder__checkmark::after {
+  content: "";
+  height: 3px;
+  width: 11px;
+  border-bottom: 1.5px solid var(--basic-white);
+  border-left: 1.5px solid var(--basic-white);
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 2px;
+  top: 0;
+}
+
+.holder__input--level-one:hover ~ .holder__checkmark::after {
+  border-bottom: 1.5px solid var(--basic-green-opacity);
+  border-left: 1.5px solid var(--basic-green-opacity);
+}
+
+.holder__input--level-one:hover ~ .holder__checkmark {
+  border: 1.8px solid var(--basic-green-opacity);
+}
+
+.holder__input--level-one:focus ~ .holder__checkmark {
+  border: 1.8px solid var(--basic-blue);
+}
+
+.holder__span {
+  font-weight: 100;
+  text-align: right;
+}
+
+.holder__list--level-two .holder__checkmark {
+  position: relative;
+  right: 0;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--basic-grey);
+  text-align: right;
+}
+
+.holder__input--level-two:hover ~ .holder__checkmark {
+  border: 1.5px solid var(--basic-blue);
+}
+
+.holder__input--level-two:focus ~ .holder__checkmark {
+  border: 1.8px solid var(--basic-gren);
+}
+
+.holder__list--level-two {
+  margin-bottom: 40px;
+}
+
+.holder__item {
+  margin-bottom: 5px;
+}
+
+.holder__text {
+  font-weight: 100;
+  text-align: right;
+  margin: 0;
+}
+
+.holder__text span {
+  text-transform: uppercase;
+}
