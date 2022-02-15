@@ -6,6 +6,7 @@
   min-width: 1200px;
   color: @basic-black;
   display: flex;
+  flex-direction: column;
   gap: 50px;
   justify-content: center;
   align-items: center;
@@ -71,5 +72,15 @@
 .list__item:nth-child(2) .list__image-holder {
   &:hover svg path {
     fill: @basic-green;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
   }
 }
