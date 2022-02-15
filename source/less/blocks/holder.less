@@ -1,10 +1,9 @@
 .holder__title {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 20px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 24px;
   line-height: 22px;
-  font-weight: bold;
   text-align: right;
-  letter-spacing: 0.05em;
+  margin-bottom: 15px;
 }
 
 .holder__list {
@@ -13,12 +12,17 @@
   text-align: right;
   text-transform: capitalize;
   font-size: 16px;
+  margin-top: 0;
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
+}
+
+.holder__item {
+  margin-bottom: 5px;
 }
 
 .holder__label {
@@ -32,7 +36,6 @@
   border: 1.5px solid @basic-white;
   border-radius: 50%;
   position: relative;
-  margin-top: 2px;
   margin-left: 15px;
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -83,7 +86,8 @@
 }
 
 .holder__span {
-  font-weight: 100;
+  font-size: 16px;
+  font-weight: 200;
 }
 
 .holder__input--checkbox-grey ~ .holder__checkmark {
@@ -127,10 +131,6 @@
 
 .holder__list--margin {
   margin-bottom: 40px;
-}
-
-.holder__item {
-  margin-bottom: 5px;
 }
 
 .holder__text {
