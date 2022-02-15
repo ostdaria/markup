@@ -13,12 +13,17 @@
   text-align: right;
   text-transform: capitalize;
   font-size: 16px;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 .holder__label {
   display: flex;
   justify-content: right;
-  position: relative;
 }
 
 .holder__checkmark {
@@ -29,6 +34,10 @@
   position: relative;
   margin-top: 2px;
   margin-left: 15px;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    border: 1px solid @basic-white;
+  }
 }
 
 .holder__input--custome {
@@ -54,11 +63,18 @@
     transform: rotate(-45deg);
     left: 2px;
     top: 0;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      border-bottom: 1px solid @basic-white;
+      border-left: 1px solid @basic-white;
+      top: 1px;
+      left: 3px;
+    }
   }
 
   &:hover ~ .holder__checkmark::after {
-    border-bottom: 1.5px solid @basic-green-opacity;
-    border-left: 1.5px solid @basic-green-opacity;
+    border-bottom: 1.5px solid @basic-dark-green;
+    border-left: 1.5px solid @basic-dark-green;
   }
 
   &:focus ~ .holder__checkmark {
@@ -68,32 +84,44 @@
 
 .holder__span {
   font-weight: 100;
-  text-align: right;
 }
 
 .holder__input--checkbox-grey ~ .holder__checkmark {
-  position: relative;
-  right: 0;
-  top: 0;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1.5px solid @basic-grey;
   text-align: right;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    border: 1px solid @basic-grey;
+  }
 }
 
 .holder__input--checkbox-grey:checked ~ .holder__checkmark {
   border: 1.5px solid @basic-blue;
   background-color: @basic-blue-opacity;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    border: 1px solid @basic-blue;
+  }
 }
 
 .holder__input--checkbox-grey {
   &:hover ~ .holder__checkmark {
     border: 1.5px solid @basic-blue;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      border: 1px solid @basic-blue;
+    }
   }
 
   &:focus ~ .holder__checkmark {
     border: 1.5px solid @basic-green;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      border: 1px solid @basic-green;
+    }
   }
 }
 

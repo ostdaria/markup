@@ -14,12 +14,16 @@
 
 .list__item {
   width: 240px;
-  height: 250px;
-  padding: 25px;
+  padding: 25px 20px;
   box-shadow: 0 3px 15px @basic-black-opacity;
   border-radius: 15px;
   background-color: @basic-white;
   color: @basic-grey;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height: 250px;
+    margin-right: 20px;
+  }
 }
 
 .list__item--background-green {
@@ -36,7 +40,7 @@
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  background-color: @basic-green-opacity;
+  background-color: @basic-dark-green;
 
   &:hover {
     background-color: @basic-white-opacity;
